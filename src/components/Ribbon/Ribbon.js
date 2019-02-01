@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import scrollToElement from 'scroll-to-element';
 
-const Ribbon = () => (
+const Ribbon = ({ handleScrollTo }) => (
 	<section className="ribbon">
 		<header className="ribbon__header">
 			<h4 className="ribbon__header-primary header-light">
@@ -17,15 +16,8 @@ const Ribbon = () => (
 			<Link
 				to="/menu"
 				className="button button-light"
-				onClick={event => {
-					if (window.location.pathname === '/menu') {
-						event.preventDefault();
-						scrollToElement('.menu', {
-							offset: 0,
-							ease: 'outBack',
-							duration: 1000
-						});
-					}
+				onClick={() => {
+					handleScrollTo('.menu');
 				}}
 			>
 				Zobacz menu
