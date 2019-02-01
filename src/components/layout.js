@@ -35,7 +35,7 @@ class Layout extends Component {
 				ease: 'outBack',
 				duration: 1000
 			});
-		}, 1);
+		}, 100);
 	}
 
 	handleScrollTo(scrollTo) {
