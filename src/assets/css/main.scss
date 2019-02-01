@@ -1,0 +1,35 @@
+/* Abstarcts */
+
+@import './abstarcts/variables';
+@import './abstarcts/functions';
+@import './abstarcts/mixins';
+
+/* Base */
+
+@import './base/normalize';
+@import './base/global';
+@import './base/typography';
+@import './base/animations';
+
+/* Components */
+
+@import './components/button';
+@import './components/hamburger';
+@import './components/tooltip';
+
+/* layout */
+
+@import 'Components/LandingPage/LandingPageNav/LandingPageNav.scss';
+@import 'Components/TopBar/TopBar.scss';
+@import 'Components/LandingPage/LandingPage.scss';
+@import 'Components/Spot/Spot.scss';
+@import 'Components/Ribbon/Ribbon.scss';
+@import 'Components/Catering/Catering.scss';
+@import 'Components/Reviews/Reviews.scss';
+@import 'Components/Gallery/Gallery.scss';
+@import 'Components/Menu/Menu.scss';
+@import 'Components/Widgets/Widgets.scss';
+@import 'Components/Footer/Footer.scss';
+
+/* Pages */
+@import './pages/notfound';
