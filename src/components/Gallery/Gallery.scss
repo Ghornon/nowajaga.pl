@@ -1,0 +1,123 @@
+.gallery {
+	width: 100%;
+	text-align: center;
+
+	&__header {
+		width: 100%;
+		padding: 3rem 20px;
+		box-sizing: border-box;
+
+		&-primary,
+		&-secondary {
+			position: relative;
+			width: 100%;
+			margin: 0;
+		}
+	}
+
+	&__grid {
+		width: 100%;
+		padding: 0 20px 20px 20px;
+		box-sizing: border-box;
+
+		@media only screen and (min-width: map-get($breakpoints, 'm' )) {
+			column-count: 2;
+			column-gap: 20px;
+			column-fill: balance-all;
+		}
+
+		@media only screen and (min-width: map-get($breakpoints, 'l' )) {
+			column-count: 3;
+		}
+
+		@media only screen and (min-width: map-get($breakpoints, 'xl' )) {
+			column-count: 4;
+		}
+
+		&-item {
+			width: 100%;
+			margin: 20px 0;
+			overflow: hidden;
+			box-sizing: border-box;
+			cursor: pointer;
+			position: relative;
+
+			&--secondary {
+				display: none;
+				@media only screen and (min-width: map-get($breakpoints, 'm' )) {
+					display: block;
+				}
+			}
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			&:hover {
+				.gallery__image {
+					transform: scale(1.2);
+				}
+
+				.gallery__link {
+					opacity: 1;
+				}
+				&:before {
+					opacity: 1;
+				}
+			}
+
+			&::before {
+				content: '';
+				display: block;
+				width: 100%;
+				height: 100%;
+				background: rgba(black, 0.2);
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				transition: all 0.5s;
+				z-index: map-get($z-index, 'overlay');
+			}
+		}
+	}
+
+	&__image {
+		width: 100%;
+		height: 300px;
+		object-fit: cover;
+		transition: all 0.5s;
+
+		@media only screen and (min-width: map-get($breakpoints, 'm' )) {
+			height: 100%;
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+		color: white;
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 0;
+		z-index: map-get($z-index, 'content');
+	}
+
+	&__icon {
+		font-size: 2rem;
+		border: 3px solid white;
+		border-radius: 50%;
+		width: 4rem;
+		height: 4rem;
+		line-height: 4rem;
+		text-align: center;
+		@include aligne2center;
+	}
+
+	&__svg {
+		width: 2rem;
+		height: 2rem;
+	}
+}

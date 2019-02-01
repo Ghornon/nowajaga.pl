@@ -1,0 +1,117 @@
+.menu {
+	width: 100%;
+
+	&__header {
+		padding: 2rem 0;
+		width: 100%;
+		max-width: 800px;
+		box-sizing: border-box;
+		text-align: center;
+		margin: 0 auto;
+
+		&-primary,
+		&-secondary {
+			margin: 0;
+			width: 100%;
+		}
+
+		&-secondary {
+			font-weight: normal;
+			border-bottom: 1px dashed $primary;
+			padding-bottom: 10px;
+		}
+
+		&-paragraph {
+			color: $secondary;
+			padding: 0 20px;
+			margin: 10px 0 0 0;
+			position: relative;
+
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: -2rem;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 12rem;
+				height: 1px;
+				background: black;
+			}
+		}
+
+		&--body {
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__marker {
+		padding: 10px 30px;
+		background: $special;
+		color: white;
+		clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%, 10% 50%);
+	}
+
+	&__price {
+		float: right;
+		color: $special;
+		text-transform: uppercase;
+	}
+
+	&__list {
+		list-style: none;
+		margin: 40px 0 0 0;
+		padding: 0;
+
+		@media only screen and (min-width: map-get($breakpoints, 'm' )) {
+			margin: 0;
+			width: calc(75% - 10px);
+		}
+
+		&-item {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	&__paragraph {
+		color: $secondary;
+		width: 100%;
+
+		@media only screen and (min-width: map-get($breakpoints, 'm' )) {
+			width: 80%;
+		}
+	}
+
+	&__body {
+		padding: 0 20px 20px 20px;
+
+		@media only screen and (min-width: map-get($breakpoints, 's' )) {
+			padding: 0 8rem 8rem 8rem;
+		}
+
+		&-content {
+			@media only screen and (min-width: map-get($breakpoints, 'l' )) {
+				display: flex;
+				justify-content: space-between;
+			}
+		}
+	}
+
+	&__images {
+		width: 100%;
+
+		@media only screen and (min-width: map-get($breakpoints, 'l' )) {
+			width: calc(25% - 10px);
+		}
+	}
+
+	&__image {
+		width: 100%;
+		max-height: 200px;
+		margin: 20px 0;
+		@media only screen and (min-width: map-get($breakpoints, 'l' )) {
+			height: 100%;
+			margin: 0 0 20px 0;
+		}
+	}
+}

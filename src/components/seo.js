@@ -59,7 +59,12 @@ function SEO({ description, lang, meta, keywords, title }) {
 									: []
 							)
 							.concat(meta)}
-					/>
+					>
+						<link
+							href="https://fonts.googleapis.com/css?family=Marck+Script|Open+Sans:400,700"
+							rel="stylesheet"
+						/>
+					</Helmet>
 				);
 			}}
 		/>
@@ -67,7 +72,7 @@ function SEO({ description, lang, meta, keywords, title }) {
 }
 
 SEO.defaultProps = {
-	lang: `en`,
+	lang: `pl`,
 	meta: [],
 	keywords: []
 };
