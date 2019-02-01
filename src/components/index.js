@@ -8,5 +8,5 @@ export { default as Ribbon } from './Ribbon/Ribbon';
 export { default as Spot } from './Spot/Spot';
 export { default as TopBar } from './TopBar/TopBar';
 export { default as Widgets } from './Widgets/Widgets';
-export { default as Layout } from './Layout';
+export { default as Layout } from './layout';
 export { default as SEO } from './seo';
