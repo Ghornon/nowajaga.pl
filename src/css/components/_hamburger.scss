@@ -1,0 +1,40 @@
+.hamburger {
+	width: 1rem;
+	height: 1rem;
+	margin: 2px 3px;
+	border-top: 3px solid #fff;
+	border-bottom: 3px solid #fff;
+	box-sizing: border-box;
+	position: relative;
+	transition-duration: 250ms;
+	cursor: pointer;
+
+	@media only screen and (min-width: map-get($breakpoints, 's' )) {
+		width: 1.5rem;
+		height: 1.5rem;
+		border-top: 4px solid #fff;
+		border-bottom: 4px solid #fff;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 1.5rem;
+		height: 3px;
+		@media only screen and (min-width: map-get($breakpoints, 's' )) {
+			width: 2rem;
+			height: 4px;
+		}
+		background: #fff;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&:hover {
+		width: 2rem;
+		@media only screen and (min-width: map-get($breakpoints, 's' )) {
+			width: 2rem;
+		}
+	}
+}

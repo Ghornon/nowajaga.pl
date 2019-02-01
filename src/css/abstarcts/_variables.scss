@@ -1,0 +1,38 @@
+/* Background colors */
+$bright: #fff;
+$dark: #1b262a;
+
+/* Font colors */
+$primary: #424953;
+$secondary: #a9b0bb;
+$special: #0eadd7;
+
+/* Breakpoints */
+
+$breakpoints: (
+	xs: 576px,
+	s: 576px,
+	m: 768px,
+	l: 992px,
+	xl: 1200px
+);
+
+$container: (
+	xs: 100%,
+	s: 100%,
+	m: 720px,
+	l: 960px,
+	xl: 80vw
+);
+$z-index: (
+	nav: 1001,
+	label: 1000,
+	background: -1,
+	default: 0,
+	overlay: 1,
+	content: 2,
+	popup: 10,
+	container: 20,
+	widgets: -10,
+	footer: 20
+);

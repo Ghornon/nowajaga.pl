@@ -1,0 +1,39 @@
+.reviews {
+	width: 100%;
+	min-height: 500px;
+	text-align: center;
+	color: white;
+	background: url('../img/reviews.jpg');
+	@include aligneBackground;
+	@include aligne2center;
+
+	&__header {
+		width: 100%;
+		padding: 10px;
+		box-sizing: border-box;
+
+		&-primary,
+		&-secondary {
+			position: relative;
+			width: 100%;
+			margin: 0;
+		}
+	}
+
+	&__icon {
+		font-size: 2.5rem;
+		padding: 2rem;
+	}
+
+	&__siema {
+		width: 100%;
+		display: block;
+	}
+
+	&__quote {
+		width: 100%;
+		margin: 0;
+		padding: 20px;
+		box-sizing: border-box;
+	}
+}

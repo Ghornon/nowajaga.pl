@@ -1,0 +1,73 @@
+html,
+body {
+	font-size: 16px;
+	@include interpolate(font-size, 320px, 1600px, 14px, 16px);
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+}
+
+/* Heading */
+
+h1 {
+	font-size: 2.5rem;
+}
+
+/* Heading h2-h6 */
+
+@for $i from 2 through 6 {
+	h#{$i} {
+		font-size: 2.5rem - ($i * 0.25rem);
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	// @include interpolate((padding-top, padding-bottom), 20rem, 70rem, 0rem, 0.5rem);
+	font-weight: bold;
+	text-transform: uppercase;
+	color: $primary;
+}
+
+.header {
+	&-dark {
+		color: $primary;
+	}
+	&-light {
+		color: white;
+	}
+
+	&-special {
+		font-family: 'Marck Script', cursive;
+		font-weight: normal;
+		text-transform: none;
+	}
+
+	&-strikethrough {
+		text-decoration: line-through;
+	}
+}
+
+.text {
+	&-sub {
+		font-size: 0.5em;
+	}
+
+	&-center {
+		text-align: center;
+	}
+
+	&-uppercase {
+		text-transform: uppercase;
+	}
+}
+
+.display-1 {
+	font-size: 4rem;
+}
+
+.display-2 {
+	font-size: 3rem;
+}

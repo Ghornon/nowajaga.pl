@@ -1,0 +1,33 @@
+.ribbon {
+	width: 100%;
+	min-height: 500px;
+	text-align: center;
+	color: white;
+	display: block;
+	background: url('../img/ribbon.jpg');
+	@include aligneBackground;
+	@include aligne2center;
+
+	&__header {
+		width: 100%;
+		padding: 20px;
+		box-sizing: border-box;
+		max-width: 800px;
+
+		&-primary {
+			position: relative;
+			width: 100%;
+
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: calc(-0.75em);
+				left: 50%;
+				transform: translateX(-50%);
+				width: 3rem;
+				height: 4px;
+				background: white;
+			}
+		}
+	}
+}
