@@ -1,24 +1,25 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import scrollToElement from 'scroll-to-element';
 
-const Nav = () => {
+const Nav = ({ handleScrollTo }) => {
 	const navList = [
 		{
 			to: '/',
-			text: 'Strona główna'
+			text: 'Strona główna',
+			scrollTo: '.container'
 		},
 		{
 			to: '/menu',
-			text: 'Menu'
+			text: 'Menu',
+			scrollTo: '.menu'
 		},
 		{
-			to: '/catering',
+			to: '/#catering',
 			text: 'Catering',
 			scrollTo: '.catering'
 		},
 		{
-			to: '/galeria',
+			to: '/#galeria',
 			text: 'Galeria',
 			scrollTo: '.gallery'
 		}
@@ -28,14 +29,9 @@ const Nav = () => {
 				to={to}
 				className="nav__link"
 				activeClassName="nav__link--active"
-				onClick={event => {
+				onClick={() => {
 					if (typeof scrollTo !== 'undefined') {
-						event.preventDefault();
-						scrollToElement(scrollTo, {
-							offset: 0,
-							ease: 'outBack',
-							duration: 1000
-						});
+						handleScrollTo(scrollTo);
 					}
 				}}
 			>

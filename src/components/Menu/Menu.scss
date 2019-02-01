@@ -1,8 +1,9 @@
 .menu {
 	width: 100%;
+	padding-bottom: 4rem;
 
 	&__header {
-		padding: 2rem 0;
+		padding: 3rem 0;
 		width: 100%;
 		max-width: 800px;
 		box-sizing: border-box;
@@ -62,7 +63,7 @@
 		margin: 40px 0 0 0;
 		padding: 0;
 
-		@media only screen and (min-width: map-get($breakpoints, 'm' )) {
+		@media only screen and (min-width: map-get($breakpoints, 'l' )) {
 			margin: 0;
 			width: calc(75% - 10px);
 		}
@@ -83,10 +84,10 @@
 	}
 
 	&__body {
-		padding: 0 20px 20px 20px;
+		padding: 0 20px;
 
 		@media only screen and (min-width: map-get($breakpoints, 's' )) {
-			padding: 0 8rem 8rem 8rem;
+			padding: 0 8rem;
 		}
 
 		&-content {

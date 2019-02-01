@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import { MenuHeader, MenuBody } from './index';
 
 import { for10 } from './MenuData/for10';
+import { pizza } from './MenuData/pizza';
 
 const Menu = () => (
 	<StaticQuery
@@ -25,6 +26,13 @@ const Menu = () => (
 				<MenuBody
 					title={`Dania za <span class="menu__marker">10 PLN</span>`}
 					items={for10}
+					images={[data.image1.childImageSharp.fluid, data.image2.childImageSharp.fluid]}
+					imgSrc={data.image1.childImageSharp.fluid}
+				/>
+
+				<MenuBody
+					title={`<span class="menu__marker">Pizza  32cm</span>`}
+					items={pizza}
 					images={[data.image1.childImageSharp.fluid, data.image2.childImageSharp.fluid]}
 					imgSrc={data.image1.childImageSharp.fluid}
 				/>
