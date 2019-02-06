@@ -3,7 +3,7 @@ import React from 'react';
 const LandingPageHeader = () => (
 	<header className="landing-page__header">
 		<h1 className="landing-page__header-primary header-light header-strikethrough header-special">
-			Pyszotka u Wiktorii
+			Pychotka u Wiktorii
 		</h1>
 		<h2 className="landing-page__header-secondary header-light">
 			<span className="text-sub">Teraz</span> Nowa

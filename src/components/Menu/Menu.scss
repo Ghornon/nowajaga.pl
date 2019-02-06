@@ -20,6 +20,8 @@
 			font-weight: normal;
 			border-bottom: 1px dashed $primary;
 			padding-bottom: 10px;
+			display: flex;
+			justify-content: space-between;
 		}
 
 		&-paragraph {
@@ -53,9 +55,10 @@
 	}
 
 	&__price {
-		float: right;
 		color: $special;
 		text-transform: uppercase;
+		text-align: right;
+		white-space: nowrap;
 	}
 
 	&__list {
@@ -65,7 +68,8 @@
 
 		@media only screen and (min-width: map-get($breakpoints, 'l' )) {
 			margin: 0;
-			width: calc(75% - 10px);
+			// width: calc(75% - 10px);
+			width: 100%;
 		}
 
 		&-item {
@@ -102,16 +106,18 @@
 		width: 100%;
 
 		@media only screen and (min-width: map-get($breakpoints, 'l' )) {
-			width: calc(25% - 10px);
+			width: calc(25vw - 20px);
+			padding-right: 20px;
 		}
 	}
 
 	&__image {
 		width: 100%;
 		max-height: 200px;
+		height: auto;
 		margin: 20px 0;
 		@media only screen and (min-width: map-get($breakpoints, 'l' )) {
-			height: 100%;
+			max-height: 100%;
 			margin: 0 0 20px 0;
 		}
 	}
