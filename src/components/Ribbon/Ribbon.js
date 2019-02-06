@@ -8,9 +8,8 @@ const Ribbon = ({ handleScrollTo }) => (
 				Najlepsze przepisy z najlepszych składników
 			</h4>
 			<p>
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, quasi alias
-				ipsum harum exercitationem iste aperiam, fugit distinctio dolorem culpa dolorum
-				animi inventore assumenda id. Nesciunt accusamus eligendi maxime ex!
+				Szanowni Klienci, na wzgląd dla waszej pewności nie mamy dania dnia. Każda potrawa
+				jest przygotowywane z świeżych produktów, przy każdym zamówieniu indywidualnie.
 			</p>
 
 			<Link

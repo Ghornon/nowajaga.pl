@@ -3,18 +3,46 @@ import { StaticQuery, graphql } from 'gatsby';
 
 import { MenuHeader, MenuBody } from './index';
 
-import { for10 } from './MenuData/for10';
-import { pizza } from './MenuData/pizza';
+import {
+	firstPage,
+	secoundPage,
+	thirdPage,
+	pizza,
+	drinks,
+	shots,
+	hotDrinks,
+	beverages
+} from './MenuData/data';
 
 const Menu = () => (
 	<StaticQuery
 		query={graphql`
 			query {
-				image1: file(relativePath: { eq: "catering_1.jpg" }) {
+				hamburger: file(relativePath: { eq: "hamburger.jpg" }) {
 					...imageCropper
 				}
 
-				image2: file(relativePath: { eq: "catering_2.jpg" }) {
+				chips: file(relativePath: { eq: "chips.jpg" }) {
+					...imageCropper
+				}
+
+				dumplings: file(relativePath: { eq: "dumplings.jpg" }) {
+					...imageCropper
+				}
+
+				rice: file(relativePath: { eq: "rice.jpg" }) {
+					...imageCropper
+				}
+
+				steak: file(relativePath: { eq: "steak.jpg" }) {
+					...imageCropper
+				}
+
+				pizza_1: file(relativePath: { eq: "pizza_1.jpg" }) {
+					...imageCropper
+				}
+
+				pizza_2: file(relativePath: { eq: "pizza_2.jpg" }) {
 					...imageCropper
 				}
 			}
@@ -24,18 +52,44 @@ const Menu = () => (
 				<MenuHeader />
 
 				<MenuBody
-					title={`Dania za <span class="menu__marker">10 PLN</span>`}
-					items={for10}
-					images={[data.image1.childImageSharp.fluid, data.image2.childImageSharp.fluid]}
-					imgSrc={data.image1.childImageSharp.fluid}
+					title={`Dania do <span class="menu__marker">10 PLN</span>`}
+					items={firstPage}
+					images={[
+						data.hamburger.childImageSharp.fluid,
+						data.chips.childImageSharp.fluid
+					]}
+				/>
+
+				<MenuBody
+					title={`Dania za <span class="menu__marker">12 PLN</span>`}
+					items={secoundPage}
+					images={[data.dumplings.childImageSharp.fluid, data.rice.childImageSharp.fluid]}
+				/>
+
+				<MenuBody
+					title={`Dania za <span class="menu__marker">13 PLN</span>`}
+					items={thirdPage}
+					images={[data.steak.childImageSharp.fluid]}
 				/>
 
 				<MenuBody
 					title={`<span class="menu__marker">Pizza  32cm</span>`}
 					items={pizza}
-					images={[data.image1.childImageSharp.fluid, data.image2.childImageSharp.fluid]}
-					imgSrc={data.image1.childImageSharp.fluid}
+					images={[
+						data.pizza_1.childImageSharp.fluid,
+						data.pizza_2.childImageSharp.fluid
+					]}
 				/>
+
+				<MenuBody title={`<span class="menu__marker">Drinki</span>`} items={drinks} />
+
+				<MenuBody title={`<span class="menu__marker">Shoty</span>`} items={shots} />
+
+				<MenuBody
+					title={`<span class="menu__marker">Napoje gorące</span>`}
+					items={hotDrinks}
+				/>
+				<MenuBody title={`<span class="menu__marker">Napoje</span>`} items={beverages} />
 			</section>
 		)}
 	/>
