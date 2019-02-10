@@ -86,7 +86,7 @@ const Menu = () => (
 				<MenuBody title={`<span class="menu__marker">Shoty</span>`} items={shots} />
 
 				<MenuBody
-					title={`<span class="menu__marker">Napoje gorące</span>`}
+					title={`Napoje <span class="menu__marker">gorące</span>`}
 					items={hotDrinks}
 				/>
 				<MenuBody title={`<span class="menu__marker">Napoje</span>`} items={beverages} />

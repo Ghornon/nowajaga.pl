@@ -42,9 +42,7 @@ const Widgets = () => (
 		<div className="container widgets__grid">
 			<WidgetsArea
 				header={`Nowa <span className="header-special header-light display-2">Jaga</span>`}
-				content={`Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate ea alias
-						inventore distinctio itaque! Dolorem deserunt, dolor quis qui doloremque
-						ullam nihil maiores blanditiis non voluptas sint cupiditate eos commodi.`}
+				content={`Zapraszamy do skorzystania z naszej oferty cateringu, imprez okolicznościowych oraz pysznego jedzenia również na dowóz!`}
 			/>
 
 			<WidgetsArea

@@ -1,26 +1,31 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
-import scrollToElement from 'scroll-to-element';
 
-const CateringArticle = ({ imgSrc, header, content }) => (
+const CateringArticle = ({
+	imgSrc,
+	header,
+	content,
+	handleScrollTo,
+	scrollTo,
+	linkTo,
+	buttonText
+}) => (
 	<div className="catering__article">
 		<Img fluid={imgSrc} className="catering__article-image" />
 		<h4 className="catering__article-header">{header}</h4>
 		<p className="catering__article-paragraph">{content}</p>
 		<Link
-			to="/catering"
+			to={linkTo}
 			className="button"
 			onClick={event => {
-				event.preventDefault();
-				scrollToElement('.gallery', {
-					offset: 0,
-					ease: 'outBack',
-					duration: 1000
-				});
+				if (typeof linkTo === 'undefined' || linkTo === '/') {
+					event.preventDefault();
+				}
+				handleScrollTo(scrollTo);
 			}}
 		>
-			Zobacz więcej
+			{buttonText}
 		</Link>
 	</div>
 );

@@ -23,15 +23,13 @@ class ReviewsSiema extends Component {
 			<div className="reviews__siema siema">
 				<Blockquote
 					starScore="5"
-					quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
-						erat a ante."
-					author="Lorem ipsum"
+					quote="Super atmosfera, polecam z całego serca GOŁĄBKI!!!"
+					author="Roland"
 				/>
 				<Blockquote
-					starScore="4"
-					quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
-						erat a ante."
-					author="Lorem ipsum"
+					starScore="5"
+					quote="Pyszne jedzenie , bardzo miła obsługa , jak najbardziej polecam :)"
+					author="Piotrek"
 				/>
 			</div>
 		);

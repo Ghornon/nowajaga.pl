@@ -15,6 +15,8 @@ class Layout extends Component {
 		this.state = {
 			scrollTo: null
 		};
+
+		this.handleScrollTo = this.handleScrollTo.bind(this);
 	}
 
 	componentDidUpdate() {
@@ -44,6 +46,10 @@ class Layout extends Component {
 
 	render() {
 		const { children } = this.props;
+		const childrenWithProps = React.Children.map(children, child =>
+			React.cloneElement(child, { handleScrollTo: this.handleScrollTo })
+		);
+
 		return (
 			<StaticQuery
 				query={graphql`
@@ -59,10 +65,10 @@ class Layout extends Component {
 					<>
 						<TopBar />
 						<div className="wrapper">
-							<LandingPage handleScrollTo={this.handleScrollTo.bind(this)} />
-							<Spot handleScrollTo={this.handleScrollTo.bind(this)} />
-							<Ribbon handleScrollTo={this.handleScrollTo.bind(this)} />
-							{children}
+							<LandingPage handleScrollTo={this.handleScrollTo} />
+							<Spot handleScrollTo={this.handleScrollTo} />
+							<Ribbon handleScrollTo={this.handleScrollTo} />
+							{childrenWithProps}
 						</div>
 						<Widgets />
 
