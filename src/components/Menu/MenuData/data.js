@@ -3,20 +3,8 @@
 
 const firstPage = [
 	{
-		name: 'Paluchy z masłem',
-		price: 10
-	},
-	{
-		name: 'Hamburger',
-		price: 7
-	},
-	{
-		name: 'Zapiekanka',
-		price: 7
-	},
-	{
-		name: 'Omlet',
-		price: 10
+		name: 'Zupa dnia',
+		price: 4
 	},
 	{
 		name: 'Frytki',
@@ -24,12 +12,24 @@ const firstPage = [
 		description: 'Ser + 1 PLN'
 	},
 	{
+		name: 'Zapiekanka',
+		price: 7
+	},
+	{
+		name: 'Hamburger',
+		price: 7
+	},
+	{
 		name: ' Barszcz z krokiecikiem lub uszkami',
 		price: 7
 	},
 	{
-		name: 'Zupa dnia',
-		price: 4
+		name: 'Omlet',
+		price: 10
+	},
+	{
+		name: 'Paluchy z masłem czosnkowym',
+		price: 10
 	},
 	{
 		name: 'Dodatki',
@@ -44,7 +44,7 @@ const secoundPage = [
 	{
 		name: 'Makaron z warzywami i kurczakiem',
 		price: 12,
-		description: 'Do wyboru: na ostro lub łagodnie'
+		description: '(Na ostro / łagodnie)'
 	},
 	{
 		name: 'Pierogi (10szt)',
@@ -90,12 +90,12 @@ const thirdPage = [
 	{
 		name: 'Filet drobiowy',
 		price: 13,
-		description: '(panierowany / z grilla / po parysku)'
+		description: '(Panierowany po parysku / z grilla)'
 	},
 	{
-		name: 'Devolay (3 szt)',
+		name: 'Devolay z masłem i serem (3 szt)',
 		price: 13,
-		description: '(z masłem i serem lub na ostro)'
+		description: '(Łagodny / na ostro)'
 	},
 	{
 		name: 'Placki ziemniaczane z mięsem w sosie pieczarkowym',
@@ -146,18 +146,17 @@ const pizza = [
 	{
 		name: '5. Ostra',
 		price: 25,
-		description: 'Soso pomidorowy, ser mozzarella, szynka, papryka piri piri, cebula, pieczarki'
+		description: 'Sos pomidorowy, ser mozzarella, szynka, papryka piri piri, cebula, pieczarki'
 	},
 	{
 		name: '6. Rukola',
 		price: 25,
-		description: 'Soso pomidorowy, ser mozzarella, salami, rukola, pomidor, pieczarki'
+		description: 'Sos pomidorowy, ser mozzarella, salami, rukola, pomidor, pieczarki'
 	},
 	{
 		name: '7. Firmowa',
 		price: 25,
-		description:
-			'Soso pomidorowy, ser mozzarella, pieczarki, kurczak, kukurydza, papryka słodka'
+		description: 'Sos pomidorowy, ser mozzarella, pieczarki, kurczak, kukurydza, papryka słodka'
 	},
 	{
 		name: 'Dodatki',
@@ -195,21 +194,22 @@ const shots = [
 		description: '(niebieskie / czerwone)'
 	},
 	{
+		name: 'Biała śmierć (6szt)',
+		price: '14'
+	},
+
+	{
+		name: 'Chuoa chups (6szt)',
+		price: '14'
+	},
+	{
 		name: 'Kamikaze (12szt)',
 		price: '27',
 		description: '(niebieskie / czerwone)'
 	},
 	{
-		name: 'Biała śmierć (6szt)',
-		price: '14'
-	},
-	{
 		name: 'Biała śmierć (12szt)',
 		price: '27'
-	},
-	{
-		name: 'Chuoa chups (6szt)',
-		price: '14'
 	},
 	{
 		name: 'Chuoa chups (12szt)',
