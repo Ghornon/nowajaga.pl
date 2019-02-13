@@ -4,7 +4,8 @@ module.exports = {
 	siteMetadata: {
 		title: `NowaJaga.pl`,
 		description: `Nowajaga.pl - restauracja, pyszne jedzenie, na dowóz, catering i kręgle a wszystko to w jednym miejscu!`,
-		author: `@ghornon`
+		author: `@ghornon`,
+		siteUrl: `https://nowajaga.pl`
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,
@@ -17,6 +18,7 @@ module.exports = {
 		},
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
+		`gatsby-plugin-sitemap`,
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
