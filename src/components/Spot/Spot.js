@@ -8,27 +8,31 @@ const Spot = ({ handleScrollTo }) => {
 			text: 'Pyszne jedzenie',
 			Icon: FaUtensils,
 			to: '/menu',
-			scrollTo: '.menu'
+			scrollTo: '.menu',
+			subText: 'Zamów pyszne jedzenie z dostawą!'
 		},
 		{
 			text: 'Catering',
 			Icon: FaBookOpen,
 			to: '/#catering',
-			scrollTo: '.catering'
+			scrollTo: '.catering',
+			subText: ''
 		},
 		{
 			text: 'Na dowóz',
 			Icon: FaTruck,
 			to: '/menu',
-			scrollTo: '.menu'
+			scrollTo: '.menu',
+			subText: 'Dowóz PON-SOB <br /> 10:00-18:00'
 		},
 		{
 			text: 'Kręgle',
 			Icon: FaBowlingBall,
 			to: '/#galeria',
-			scrollTo: '.gallery'
+			scrollTo: '.gallery',
+			subText: 'PON-PT: 30 PLN/h <br /> SOB: 40 PLN/h <br /> NIEDZ: 30 PLN/h'
 		}
-	].map(({ text, Icon, to, scrollTo }, index) => (
+	].map(({ text, Icon, to, scrollTo, subText }, index) => (
 		<li className="spot__list-item" key={index}>
 			<Link
 				to={to}
@@ -44,6 +48,7 @@ const Spot = ({ handleScrollTo }) => {
 				</div>
 				<h5>{text}</h5>
 			</Link>
+			{/* <h6 className="text-uppercase" dangerouslySetInnerHTML={{ __html: subText }} /> */}
 		</li>
 	));
 	return (

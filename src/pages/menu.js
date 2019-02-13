@@ -4,10 +4,7 @@ import { SEO, Layout, Menu } from 'Components';
 
 const MenuPage = () => (
 	<>
-		<SEO
-			title="Menu"
-			keywords={[`nowa`, `jaga`, `nowajaga`, `restauracja`, `catering`, `kręgle`, `nowytarg`]}
-		/>
+		<SEO title="Menu" />
 		<Layout>
 			<Menu />
 		</Layout>

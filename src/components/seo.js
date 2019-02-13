@@ -34,6 +34,10 @@ function SEO({ description, lang, meta, keywords, title }) {
 								content: `website`
 							},
 							{
+								property: `og:image`,
+								content: `ogimage.jpg`
+							},
+							{
 								name: `twitter:card`,
 								content: `summary`
 							},
@@ -74,7 +78,22 @@ function SEO({ description, lang, meta, keywords, title }) {
 SEO.defaultProps = {
 	lang: `pl`,
 	meta: [],
-	keywords: []
+	keywords: [
+		`nowa`,
+		`jaga`,
+		`nowajaga`,
+		`restauracja`,
+		`catering`,
+		`kręgle`,
+		`nowytarg`,
+		`dowóz`,
+		`pl`,
+		`nowajaga.pl`,
+		`nowy`,
+		`targ`,
+		`impreyz`,
+		`okolicznościowe`
+	]
 };
 
 SEO.propTypes = {

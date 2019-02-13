@@ -6,6 +6,7 @@
 		list-style: none;
 		margin: 0;
 		padding: 0;
+
 		@media only screen and (min-width: map-get($breakpoints, 's' )) {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
@@ -22,6 +23,8 @@
 			margin: 0;
 			text-align: center;
 			color: $primary;
+			position: relative;
+			overflow: hidden;
 		}
 	}
 
@@ -63,6 +66,38 @@
 		&:hover {
 			&::after {
 				width: 80%;
+			}
+		}
+	}
+
+	&__card {
+		&-front {
+			backface-visibility: hidden;
+		}
+
+		&-backface {
+			backface-visibility: hidden;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%) rotateY(180deg);
+			transition-duration: 250ms;
+			width: calc(100% - 20px);
+			height: calc(100% - 20px);
+			border: 3px solid $primary;
+			border-radius: 5px;
+			margin: 0;
+			padding: 10px;
+			box-sizing: border-box;
+			@include aligne2center;
+		}
+
+		&:hover {
+			.spot__card-front {
+				transform: rotateY(180deg);
+			}
+			.spot__card-backface {
+				transform: translateX(-50%) rotateY(360deg);
 			}
 		}
 	}
