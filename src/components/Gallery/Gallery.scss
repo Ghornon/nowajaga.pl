@@ -20,17 +20,17 @@
 		padding: 0 20px 20px 20px;
 		box-sizing: border-box;
 
-		@media only screen and (min-width: map-get($breakpoints, 'm' )) {
+		@media only screen and (min-width: map-get($breakpoints, 'm')) {
 			column-count: 2;
 			column-gap: 20px;
 			column-fill: balance-all;
 		}
 
-		@media only screen and (min-width: map-get($breakpoints, 'l' )) {
+		@media only screen and (min-width: map-get($breakpoints, 'l')) {
 			column-count: 3;
 		}
 
-		@media only screen and (min-width: map-get($breakpoints, 'xl' )) {
+		@media only screen and (min-width: map-get($breakpoints, 'xl')) {
 			column-count: 4;
 		}
 
@@ -39,17 +39,18 @@
 			margin: 20px 0;
 			overflow: hidden;
 			box-sizing: border-box;
-			cursor: pointer;
+			// cursor: pointer;
 			position: relative;
 
 			&--secondary {
+
 				// display: none;
-				@media only screen and (min-width: map-get($breakpoints, 'm' )) {
+				@media only screen and (min-width: map-get($breakpoints, 'm')) {
 					display: block;
 				}
 			}
 
-			&:first-child {
+			s &:first-child {
 				margin-top: 0;
 			}
 
@@ -58,12 +59,13 @@
 					transform: scale(1.2);
 				}
 
-				.gallery__link {
-					opacity: 1;
-				}
-				&:before {
-					opacity: 1;
-				}
+				// .gallery__link {
+				// 	opacity: 1;
+				// }
+
+				// &:before {
+				// 	opacity: 1;
+				// }
 			}
 
 			&::before {
@@ -88,7 +90,7 @@
 		object-fit: cover;
 		transition: all 0.5s;
 
-		@media only screen and (min-width: map-get($breakpoints, 'm' )) {
+		@media only screen and (min-width: map-get($breakpoints, 'm')) {
 			height: 100%;
 		}
 	}

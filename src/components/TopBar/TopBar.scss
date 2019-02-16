@@ -6,7 +6,7 @@
 	left: 0;
 	z-index: map-get($z-index, 'content');
 
-	@media only screen and (min-width: map-get($breakpoints, 'm' )) {
+	@media only screen and (min-width: map-get($breakpoints, 'm')) {
 		position: relative;
 	}
 
@@ -15,12 +15,14 @@
 		height: 8rem;
 		display: flex;
 		flex-direction: row;
-		align-items: center;
+		align-items: stretch;
 		justify-content: center;
 		list-style: none;
 		margin: 0;
 		padding: 0;
 		z-index: map-get($z-index, 'text');
+
+
 	}
 
 	&__contact-list-item {
@@ -28,10 +30,13 @@
 		display: flex;
 		align-items: center;
 		flex-direction: column;
+		width: 30vw;
+		margin-top: 30px;
 
-		@media only screen and (min-width: map-get($breakpoints, 's' )) {
+		@media only screen and (min-width: map-get($breakpoints, 's')) {
 			flex-direction: row;
 			margin: 10px;
+			width: auto;
 		}
 	}
 
@@ -53,7 +58,9 @@
 		color: white;
 		font-size: 0.8rem;
 		font-weight: normal;
-		@media only screen and (min-width: map-get($breakpoints, 's' )) {
+		text-align: center;
+
+		@media only screen and (min-width: map-get($breakpoints, 's')) {
 			letter-spacing: 2px;
 		}
 	}
