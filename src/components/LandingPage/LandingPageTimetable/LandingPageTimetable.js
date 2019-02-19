@@ -21,6 +21,7 @@ const LandingPageTimetable = () => {
 			<input type="checkbox" name="timetable-btn" id="timetable-btn" />
 			<label htmlFor="timetable-btn" className="landing-page__timetable-label">
 				<FaAngleUp className="landing-page__timetable-label-arrow" />
+				<span className="text-uppercase">Godziny otwarcia</span>
 			</label>
 			<div className="landing-page__timetable">
 				<ul className="landing-page__timetable-list">{timetableList}</ul>
