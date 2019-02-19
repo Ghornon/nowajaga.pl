@@ -2,7 +2,7 @@
 
 ### Website of the restaurant in my home town.
 
-See [demo](https://nowajagapl.netlify.com/) on [netlify.com](https://netlify.com)
+See [full website](https://nowajaga.pl/) or [demo](https://nowajagapl.netlify.com/) on [netlify.com](https://netlify.com)
 
 #### Technologies used in the project:
 
