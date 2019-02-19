@@ -3,16 +3,7 @@ import { StaticQuery, graphql } from 'gatsby';
 
 import { MenuHeader, MenuBody } from './index';
 
-import {
-	firstPage,
-	secoundPage,
-	thirdPage,
-	pizza,
-	drinks,
-	shots,
-	hotDrinks,
-	beverages
-} from './MenuData/data';
+import { firstPage, secoundPage, thirdPage, pizza, hotDrinks, beverages } from './MenuData/data';
 
 const Menu = () => (
 	<StaticQuery
@@ -80,10 +71,6 @@ const Menu = () => (
 						data.pizza_2.childImageSharp.fluid
 					]}
 				/>
-
-				<MenuBody title={`<span class="menu__marker">Drinki</span>`} items={drinks} />
-
-				<MenuBody title={`<span class="menu__marker">Shoty</span>`} items={shots} />
 
 				<MenuBody
 					title={`Napoje <span class="menu__marker">gorące</span>`}
