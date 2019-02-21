@@ -1,15 +1,19 @@
 .footer {
-	height: 40px;
-	line-height: 40px;
-	background: white;
-	color: $dark;
-	text-align: center;
-	box-shadow: 0 0 12px rgba(black, 0.3);
-	font-weight: bold;
-	font-size: 0.8rem;
+	width: 100%;
+	background: $dark;
 	z-index: map-get($z-index, 'footer');
-	margin: 0 auto;
-	margin-top: -40px;
+
+	&__box {
+		height: 40px;
+		line-height: 40px;
+		background: white;
+		color: $dark;
+		text-align: center;
+		box-shadow: 0 0 12px rgba(black, 0.3);
+		font-weight: bold;
+		font-size: 0.8rem;
+		margin: 0 auto;
+	}
 
 	&__link {
 		text-decoration: underline;

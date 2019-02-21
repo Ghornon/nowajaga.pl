@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'gatsby';
+import { connectWithStore } from '../../store/Store';
 
-const Ribbon = ({ handleScrollTo }) => (
+const RibbonUI = ({ handleScrollTo }) => (
 	<section className="ribbon">
 		<header className="ribbon__header">
 			<h4 className="ribbon__header-primary header-light">
@@ -25,4 +26,5 @@ const Ribbon = ({ handleScrollTo }) => (
 	</section>
 );
 
+const Ribbon = connectWithStore(RibbonUI);
 export default Ribbon;

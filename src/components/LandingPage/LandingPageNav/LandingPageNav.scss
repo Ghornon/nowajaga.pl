@@ -10,7 +10,8 @@
 	z-index: map-get($z-index, 'nav');
 	margin-left: 100%;
 	transition: margin 250ms ease-in-out;
-	@media only screen and (min-width: map-get($breakpoints, 'm' )) {
+
+	@media only screen and (min-width: map-get($breakpoints, 'm')) {
 		position: relative;
 		height: auto;
 		background: transparent;
@@ -23,7 +24,8 @@
 		display: block;
 		text-align: center;
 		padding: 20px 10px;
-		@media only screen and (min-width: map-get($breakpoints, 'm' )) {
+
+		@media only screen and (min-width: map-get($breakpoints, 'm')) {
 			padding: 15px 10px;
 		}
 
@@ -31,7 +33,8 @@
 			background: $special;
 			padding: 20px 40px;
 			clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%, 10% 50%);
-			@media only screen and (min-width: map-get($breakpoints, 'm' )) {
+
+			@media only screen and (min-width: map-get($breakpoints, 'm')) {
 				padding: 15px 40px;
 			}
 		}
@@ -42,7 +45,8 @@
 		top: 10px;
 		right: 10px;
 		z-index: map-get($z-index, 'label');
-		@media only screen and (min-width: map-get($breakpoints, 'm' )) {
+
+		@media only screen and (min-width: map-get($breakpoints, 'm')) {
 			display: none;
 		}
 	}
@@ -52,7 +56,7 @@
 		margin: 0;
 		padding: 0;
 
-		@media only screen and (min-width: map-get($breakpoints, 'm' )) {
+		@media only screen and (min-width: map-get($breakpoints, 'm')) {
 			display: flex;
 		}
 	}
@@ -60,13 +64,20 @@
 	&__nav-list-item {
 		margin: 0;
 	}
+
+	&__hamburger {
+		width: 1.5rem;
+		height: 1.5rem;
+		cursor: pointer;
+		filter: drop-shadow(0 0 1px rgba($primary, 1));
+	}
 }
 
 #nav-btn {
 	display: none;
 }
 
-#nav-btn:checked ~ .nav {
+#nav-btn:checked~.nav {
 	display: flex;
 	margin-left: 0;
 }

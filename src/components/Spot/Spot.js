@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { connectWithStore } from 'Store/Store';
 import { FaUtensils, FaBookOpen, FaTruck, FaBowlingBall } from 'react-icons/fa';
 
-const Spot = ({ handleScrollTo }) => {
+const SpotUI = ({ handleScrollTo }) => {
 	const spotList = [
 		{
 			text: 'Pyszne jedzenie',
@@ -14,7 +15,7 @@ const Spot = ({ handleScrollTo }) => {
 		{
 			text: 'Catering',
 			Icon: FaBookOpen,
-			to: '/#catering',
+			to: '/',
 			scrollTo: '.catering',
 			subText: ''
 		},
@@ -28,7 +29,7 @@ const Spot = ({ handleScrollTo }) => {
 		{
 			text: 'Kręgle',
 			Icon: FaBowlingBall,
-			to: '/#galeria',
+			to: '/',
 			scrollTo: '.gallery',
 			subText: 'PON-PT: 30 PLN/h <br /> SOB: 40 PLN/h <br /> NIEDZ: 30 PLN/h'
 		}
@@ -58,4 +59,5 @@ const Spot = ({ handleScrollTo }) => {
 	);
 };
 
+const Spot = connectWithStore(SpotUI);
 export default Spot;

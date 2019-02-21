@@ -2,10 +2,10 @@ import React from 'react';
 
 import { LandingPageHeader, LandingPageNav, LandingPageTimetable } from './index';
 
-const LandingPage = ({ handleScrollTo }) => (
+const LandingPage = () => (
 	<section className="landing-page">
 		<LandingPageHeader />
-		<LandingPageNav handleScrollTo={handleScrollTo.bind(this)} />
+		<LandingPageNav />
 		<LandingPageTimetable />
 	</section>
 );

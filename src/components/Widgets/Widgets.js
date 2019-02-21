@@ -37,12 +37,17 @@ const timetableList = [
 	</li>
 ));
 
+const blockText = [
+	'Zapraszamy do skorzystania z naszej oferty cateringu, imprez okolicznościowych orazpysznego jedzenia również na dowóz!',
+	'Zarezerwuj stolik, tor do kręgli lub złóż zamówienie pod numerem 888-414-167 lub bezpośrednio w restauracji.'
+].map((element, index) => <p key={index}>{element}</p>);
+
 const Widgets = () => (
 	<section className="widgets">
 		<div className="container widgets__grid">
 			<WidgetsArea
 				header={`Nowa <span className="header-special header-light display-2">Jaga</span>`}
-				content={`Zapraszamy do skorzystania z naszej oferty cateringu, imprez okolicznościowych oraz pysznego jedzenia również na dowóz!`}
+				content={blockText}
 			/>
 
 			<WidgetsArea

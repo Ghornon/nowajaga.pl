@@ -23,7 +23,9 @@ body {
 	width: 100%;
 	max-width: 1600px;
 	margin: 0 auto;
-	@each $key, $value in $breakpoints {
+
+	@each $key,
+	$value in $breakpoints {
 		@media only screen and (min-width: map-get($breakpoints, $key)) {
 			width: map-get($container, $key);
 		}
@@ -35,4 +37,9 @@ body {
 	z-index: map-get($z-index, 'container');
 	box-shadow: 0 0 12px rgba(black, 0.6);
 	@extend .container;
+	position: relative;
+
+	&::after {
+		position: absolute;
+	}
 }
