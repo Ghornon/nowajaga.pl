@@ -1,9 +1,10 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
+import { connectWithStore } from 'Store/Store';
 
 import { CateringHeader, CateringArticle } from './index';
 
-const Catering = ({ handleScrollTo }) => {
+const CateringUI = ({ handleScrollTo }) => {
 	return (
 		<StaticQuery
 			query={graphql`
@@ -56,4 +57,5 @@ const Catering = ({ handleScrollTo }) => {
 	);
 };
 
+const Catering = connectWithStore(CateringUI);
 export default Catering;

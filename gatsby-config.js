@@ -86,7 +86,9 @@ module.exports = {
 					Components: path.resolve(__dirname, 'src/components'),
 					Assets: path.resolve(__dirname, 'src/assets'),
 					Pages: path.resolve(__dirname, 'src/pages'),
-					Sass: path.resolve(__dirname, 'src/assets/css')
+					Sass: path.resolve(__dirname, 'src/assets/css'),
+					Store: path.relative(__dirname, 'src/store'),
+					Actions: path.relative(__dirname, 'src/actions')
 				},
 				extensions: []
 			}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 
+import { Provider } from '../store/Store';
 import scrollToElement from 'scroll-to-element';
 
 import 'Sass/main.scss';
@@ -37,6 +38,8 @@ class Layout extends Component {
 				ease: 'outBack',
 				duration: 1000
 			});
+
+			// self.setState({ scrollTo: null });
 		}, 100);
 	}
 
@@ -46,9 +49,6 @@ class Layout extends Component {
 
 	render() {
 		const { children } = this.props;
-		const childrenWithProps = React.Children.map(children, child =>
-			React.cloneElement(child, { handleScrollTo: this.handleScrollTo })
-		);
 
 		return (
 			<StaticQuery
@@ -62,18 +62,18 @@ class Layout extends Component {
 					}
 				`}
 				render={data => (
-					<>
+					<Provider>
 						<TopBar />
 						<div className="wrapper">
-							<LandingPage handleScrollTo={this.handleScrollTo} />
-							<Spot handleScrollTo={this.handleScrollTo} />
-							<Ribbon handleScrollTo={this.handleScrollTo} />
-							{childrenWithProps}
+							<LandingPage />
+							<Spot />
+							<Ribbon />
+							{children}
 						</div>
 						<Widgets />
 
 						<Footer title={data.site.siteMetadata.title} />
-					</>
+					</Provider>
 				)}
 			/>
 		);

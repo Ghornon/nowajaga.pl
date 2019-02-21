@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { connectWithStore } from 'Store/Store';
 
-const Nav = ({ handleScrollTo }) => {
+const NavUI = ({ handleScrollTo }) => {
 	const navList = [
 		{
 			to: '/',
 			text: 'Strona główna',
-			scrollTo: '.container'
+			scrollTo: '.landing-page'
 		},
 		{
 			to: '/menu',
@@ -14,12 +15,12 @@ const Nav = ({ handleScrollTo }) => {
 			scrollTo: '.menu'
 		},
 		{
-			to: '/#catering',
+			to: '/',
 			text: 'Catering',
 			scrollTo: '.catering'
 		},
 		{
-			to: '/#galeria',
+			to: '/',
 			text: 'Galeria',
 			scrollTo: '.gallery'
 		}
@@ -59,4 +60,5 @@ const Nav = ({ handleScrollTo }) => {
 	);
 };
 
+const Nav = connectWithStore(NavUI);
 export default Nav;
