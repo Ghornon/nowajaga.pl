@@ -17,16 +17,16 @@ const firstPage = [
 		description: 'ser, pieczarki'
 	},
 	{
-		name: 'Hamburger',
-		price: 7
-	},
-	{
 		name: 'Barszcz z krokiecikiem lub uszkami',
 		price: 7
 	},
 	{
+		name: 'Hamburger',
+		price: 9
+	},
+	{
 		name: 'Tortilla vege',
-		price: 7
+		price: 10
 	},
 	{
 		name: 'Omlet z 1 dodatkiem',
@@ -84,6 +84,10 @@ const secoundPage = [
 		name: 'Gołąbki w sosie pomidorowym',
 		price: 12,
 		description: ''
+	},
+	{
+		name: 'Sałatka grecka lub z kurczakiem',
+		price: 12
 	}
 ];
 
@@ -118,7 +122,7 @@ const thirdPage = [
 		description: ''
 	},
 	{
-		name: 'Sztuka miesą w sosie BBQ',
+		name: 'Sztuka miesa w sosie BBQ',
 		price: 13,
 		description: ''
 	}
@@ -131,11 +135,11 @@ const pizza = [
 	{
 		name: '1. Margherita',
 		price: 16,
-		description: 'Sos pomidorowy, ser mozzarella, pieczarki, oregano'
+		description: 'Sos pomidorowy, ser mozzarella, oregano'
 	},
 	{
 		name: '2. Vege',
-		price: 16,
+		price: 18,
 		description: 'Sos pomidorowy, ser mozzarella, pieczarki, pieczarki, kukurydza, cebula'
 	},
 	{
@@ -187,31 +191,31 @@ const hotDrinks = [
 
 const beverages = [
 	{
-		name: 'Pepsi 0,25L',
+		name: 'Pepsi 0,2L',
 		price: 4
 	},
 	{
-		name: 'Mirinda 0,25L',
+		name: 'Mirinda 0,2L',
 		price: 4
 	},
 	{
-		name: '7 UP 0,25L',
+		name: '7 UP 0,2L',
 		price: 4
 	},
 	{
-		name: 'Sok Toma 0,25L',
+		name: 'Sok Toma 0,2L',
 		price: 4
 	},
 	{
-		name: 'Tymbark 0,25L',
+		name: 'Tymbark 0,2L',
 		price: 4
 	},
 	{
-		name: 'Woda gazowana 0,25L',
+		name: 'Woda gazowana 0,2L',
 		price: 3
 	},
 	{
-		name: 'Woda niegazowana 0,25L',
+		name: 'Woda niegazowana 0,2L',
 		price: 3
 	},
 	{

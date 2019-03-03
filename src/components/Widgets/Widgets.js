@@ -38,7 +38,7 @@ const timetableList = [
 ));
 
 const blockText = [
-	'Zapraszamy do skorzystania z naszej oferty cateringu, imprez okolicznościowych orazpysznego jedzenia również na dowóz!',
+	'Zapraszamy do skorzystania z naszej oferty cateringu, imprez okolicznościowych oraz pysznego jedzenia również na dowóz!',
 	'Zarezerwuj stolik, tor do kręgli lub złóż zamówienie pod numerem 888-414-167 lub bezpośrednio w restauracji.'
 ].map((element, index) => <p key={index}>{element}</p>);
 

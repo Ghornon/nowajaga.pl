@@ -6,7 +6,7 @@ const LandingPageTimetable = () => {
 		['Kuchnia czynna', 'do 22:00'],
 		['Pon-Śr', '10:00 - 22:00'],
 		['Czw-Sob', '10:00 - 24:00'],
-		['Niedziela', '10:00-18:00'],
+		['Niedziela', '10:00-22:00'],
 		['Dowóz pon-sob', '10:00-18:00']
 	].map((element, index) => (
 		<li className="landing-page__timetable-list-item" key={index}>
