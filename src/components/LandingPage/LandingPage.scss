@@ -42,17 +42,16 @@
 	&__timetable {
 		z-index: map-get($z-index, 'content');
 		width: 100%;
-		max-height: 60px;
+		height: 60px;
 		// height: 100%;
 		background: rgba(black, 0.6);
 		position: absolute;
 		bottom: 0;
 		left: 0;
-		overflow: hidden;
 		transition: all 250ms linear;
-		@media only screen and (min-width: map-get($breakpoints, 'm' )) {
-			max-height: 80px;
-		}
+		text-align: center;
+		@include aligne2center;
+		text-transform: uppercase;
 
 		&-list {
 			list-style: none;
