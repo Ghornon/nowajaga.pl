@@ -5,11 +5,11 @@ import { WidgetsArea } from './index';
 
 const contactList = [
 	{
-		text: 'KRÓLOWEJ JADWIGI 27B',
+		text: 'KRÓLOWEJ JADWIGI',
 		Icon: FaMapMarkerAlt
 	},
 	{
-		text: '881-414-167',
+		text: '123-456-789',
 		Icon: FaPhone
 	},
 	{
@@ -23,23 +23,15 @@ const contactList = [
 	</li>
 ));
 
-const timetableList = [
-	['Kuchnia czynna', 'do 22:00'],
-	['Pon-Śr', '10:00 - 22:00'],
-	['Czw-Sob', '10:00 - 24:00'],
-	['Niedziela', '10:00-18:00'],
-	['Dowóz pon-sob', '10:00-18:00']
-].map((element, index) => (
+const timetableList = [['Lokal zamknięty']].map((element, index) => (
 	<li className="widgets__list-item widgets__list-item" key={index}>
 		{element[0]}
-		<br />
-		{element[1]}
 	</li>
 ));
 
 const blockText = [
-	'Zapraszamy do skorzystania z naszej oferty cateringu, imprez okolicznościowych orazpysznego jedzenia również na dowóz!',
-	'Zarezerwuj stolik, tor do kręgli lub złóż zamówienie pod numerem 888-414-167 lub bezpośrednio w restauracji.'
+	'Zapraszamy do skorzystania z naszej oferty cateringu, imprez okolicznościowych oraz pysznego jedzenia również na dowóz!',
+	'Zarezerwuj stolik, tor do kręgli lub złóż zamówienie pod numerem 123-456-789 lub bezpośrednio w restauracji.'
 ].map((element, index) => <p key={index}>{element}</p>);
 
 const Widgets = () => (

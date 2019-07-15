@@ -4,11 +4,11 @@ import { FaMapMarkerAlt, FaPhone, FaFacebookF } from 'react-icons/fa';
 const TopBar = () => {
 	const contactList = [
 		{
-			text: 'KRÓLOWEJ JADWIGI 27B',
+			text: 'KRÓLOWEJ JADWIGI',
 			Icon: FaMapMarkerAlt
 		},
 		{
-			text: '881-414-167',
+			text: '123-456-789',
 			Icon: FaPhone
 		},
 		{

@@ -92,7 +92,18 @@ SEO.defaultProps = {
 		`nowy`,
 		`targ`,
 		`impreyz`,
-		`okolicznościowe`
+		`okolicznościowe`,
+		`piłkarzyki`,
+		`nowa jaga`,
+		`nowa jaga restauracja`,
+		`nowajaga restauracja`,
+		`nowajaga.pl restauracja`,
+		`nowajaga catering`,
+		`nowajaga kręgle`,
+		`restauracja nowy targ`,
+		`menu`,
+		`nowa jaga nowy targ menu`,
+		`nowajaga nowy targ menu`
 	]
 };
 

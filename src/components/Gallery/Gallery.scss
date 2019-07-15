@@ -43,14 +43,13 @@
 			position: relative;
 
 			&--secondary {
-
 				// display: none;
 				@media only screen and (min-width: map-get($breakpoints, 'm')) {
 					display: block;
 				}
 			}
 
-			s &:first-child {
+			&:first-child {
 				margin-top: 0;
 			}
 
@@ -58,14 +57,6 @@
 				.gallery__image {
 					transform: scale(1.2);
 				}
-
-				// .gallery__link {
-				// 	opacity: 1;
-				// }
-
-				// &:before {
-				// 	opacity: 1;
-				// }
 			}
 
 			&::before {
@@ -88,7 +79,7 @@
 		width: 100%;
 		height: 300px;
 		object-fit: cover;
-		transition: all 0.5s;
+		transition: transform 0.5s ease-in-out;
 
 		@media only screen and (min-width: map-get($breakpoints, 'm')) {
 			height: 100%;
